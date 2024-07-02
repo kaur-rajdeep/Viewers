@@ -26,6 +26,21 @@ const screenShotPaths = {
   mpr: {
     mprDisplayedCorrectly: 'mprDisplayedCorrectly.png',
   },
+  threeDFourUp: {
+    threeDFourUpDisplayedCorrectly: 'threeDFourUpDisplayedCorrectly.png',
+  },
+  threeDMain: {
+    threeDMainDisplayedCorrectly: 'threeDMainDisplayedCorrectly.png',
+  },
+  threeDPrimary: {
+    threeDPrimaryDisplayedCorrectly: 'threeDPrimaryDisplayedCorrectly.png',
+  },
+  threeDOnly: {
+    threeDOnlyDisplayedCorrectly: 'threeDOnlyDisplayedCorrectly.png',
+  },
+  axialPrimary: {
+    axialPrimaryDisplayedCorrectly: 'axialPrimaryDisplayedCorrectly.png',
+  },
   probe: {
     probeDisplayedCorrectly: 'probeDisplayedCorrectly.png',
   },
@@ -35,6 +50,36 @@ const screenShotPaths = {
   spline: {
     splineDisplayedCorrectly: 'splineDisplayedCorrectly.png',
   },
+  dicomTagBrowser: {
+    dicomTagBrowserDisplayedCorrectly: 'dicomTagBrowserDisplayedCorrectly.png',
+  },
+  rotateRight: {
+    rotateRightDisplayedCorrectly: 'rotateRightDisplayedCorrectly.png',
+  },
+  invert: {
+    invertDisplayedCorrectly: 'invertDisplayedCorrectly.png',
+  },
+  flipHorizontal: {
+    flipHorizontalDisplayedCorrectly: 'flipHorizontalDisplayedCorrectly.png',
+  },
+  reset: {
+    resetDisplayedCorrectly: 'resetDisplayedCorrectly.png',
+  },
+  srHydration: {
+    srPostHydration: 'srPostHydration.png',
+    srPreHydration: 'srPreHydration.png',
+    srJumpToMeasurement: 'srJumpToMeasurement.png',
+  },
+  segHydration: {
+    segPostHydration: 'segPostHydration.png',
+    segPreHydration: 'segPreHydration.png',
+    segJumpToSegment: 'segJumpToSegment.png',
+  },
+  rtHydration: {
+    rtPostHydration: 'rtPostHydration.png',
+    rtPreHydration: 'rtPreHydration.png',
+    rtJumpToStructure: 'rtJumpToStructure.png',
+  }
 };
 
 export { screenShotPaths };

@@ -7,6 +7,7 @@ import LegacyButtonGroup from '../LegacyButtonGroup';
 import LegacyButton from '../LegacyButton';
 import ThumbnailList from '../ThumbnailList';
 import { StringNumber } from '../../types';
+import { DisplaySetMessage, DisplaySetMessageList } from '@ohif/core';
 
 const getTrackedSeries = displaySets => {
   let trackedSeries = 0;
@@ -36,11 +37,35 @@ const StudyBrowser = ({
   const { t } = useTranslation('StudyBrowser');
   const { customizationService } = servicesManager?.services || {};
 
+
   const getTabContent = () => {
     const tabData = tabs.find(tab => tab.name === activeTabName);
     return tabData.studies.map(
       ({ studyInstanceUid, date, description, numInstances, modalities, displaySets }) => {
         const isExpanded = expandedStudyInstanceUIDs.includes(studyInstanceUid);
+
+
+// The following function is made to remove the displaySet that is not reconstructable
+
+        for (let j = 0; j < displaySets.length; j++) {
+
+          let msg = displaySets[j].messages
+          console.log(typeof msg)
+          if (typeof msg === 'object'){
+            for (let k = 0; k < msg.messages.length; k++){
+              console.log(msg.messages[k])
+              if (msg.messages[k].id == 3){
+
+                console.log('33333333333333333')
+                displaySets.splice(j,1)
+              }
+            }
+          }
+      }
+
+      console.log("yyyyyyyyyyyyyyyyyyyyy", displaySets)
+
+
         return (
           <React.Fragment key={studyInstanceUid}>
             <StudyItem
